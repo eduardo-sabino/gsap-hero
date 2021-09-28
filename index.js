@@ -33,16 +33,20 @@ gsap.to("#yellow-car",{
 
 
 
-function toggleListItemClass(e){
+window.toggleListItemClass = function (e){    
     const list = document.getElementsByTagName('ul').item(0)
     const items = list.getElementsByTagName('li')
-    console.log(items.item(0))
-    removeClass(items)
+    const clickedItem = e.currentTarget
+    removeClassFromLinks(items)
+    addClassToLink(clickedItem)
 }
-function removeClass(items){
+function removeClassFromLinks(items){
     for (let i = 0; i < items.length; i++) {
-        let link = items.item(i).getElementsByTagName('a')
-        console.log(link)
+        let link = items.item(i).getElementsByTagName('a').item(0)
         link.className = ""
     }
+}
+function addClassToLink(item){
+    const link = item.getElementsByTagName('a').item(0)
+    link.className = "active"
 }
