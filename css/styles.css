@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1;
+    
+}
+
+h1, h2, p{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 1.3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+    /* justify-content: space-between ; */
+
+}
+
+header .logo{
+    position: absolute;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #fff;
+    padding-top: .4em;
+    left: 0;
+    padding-left: 10vw;
+}
+
+header nav{
+    color: #fff;
+}
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+header li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 2.5rem;
+    margin-top: 1rem;
+    
+}
+header a{
+    color: #918a9e;
+    position: relative;
+    transition: color .5s;
+}
+a:hover{
+    color: white;
+}
+a.active::after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+
+    background-color: white;
+    
+  } 
+section.hero{
+    background-color: #1C073E;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero .hero-content{
+    color: white;
+    padding-left: 10vw;
+    /* margin-right: 45%; */
+    max-width: 33rem;
+}
+
+.hero h1{
+    font-family: inherit;
+    font-size: 2.5em;
+    margin-bottom: .5em;
+}
+
+.hero span{
+    color: #FFD500;
+}
+
+.hero p{
+    font-size: 1em;
+    margin-bottom: 1em; 
+    line-height: 1.5em;
+    color: #918a9e;
+}
+
+button{
+    padding: 1em .6em;
+    font-family: inherit;
+    border: 0;
+    font-size: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: border .5s, background-color .3s, color .4s;    
+}
+
+
+
+.hero .signup-btn{
+    background-color: #fff; 
+    color: #1C073E;
+}
+
+.hero .talk-btn{
+    background-color: #1C073E;
+    color: white;
+}
+.illustration{
+    width: 100%;
+}
+
+button:hover, .signup-btn:hover{
+    color: white;
+    background-color: #1C073E;
+    border: 1px solid rgb(52, 122, 180);
+}
+
+@media only screen and (max-width: 757px){
+    header{
+        padding: 1.3rem 0;
+        flex-direction: column;
+    }
+    header .logo{
+        padding-left: 10vw;
+        position: initial;
+    }
+
+    header ul{
+        display: none;
+    }
+
+    section.hero{
+        background-color: #1C073E;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .hero .hero-content{
+        /* padding-top: 13em; */
+        padding-left: 10vw;
+        
+    }
+    .illustration{
+        /* width: 50%;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1); */
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+}
