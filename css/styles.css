@@ -140,6 +140,19 @@ button:hover, .signup-btn:hover, .talk-btn:hover{
     background-color: #1C073E;
     border: 1px solid rgb(22, 140, 236);
 }
+@media only screen and (max-width: 930px){
+    .illustration{
+        display: none;
+    }
+    .hero-content{
+        margin-right: 10%;
+    }
+    .hero .hero-content{
+        max-width: 36rem;
+    }
+
+}
+
 
 @media only screen and (max-width: 757px){
     header{
@@ -169,14 +182,4 @@ button:hover, .signup-btn:hover, .talk-btn:hover{
         padding-left: 10vw;
         
     }
-    .illustration{
-        /* width: 50%;
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1); */
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 500px){
-
 }
