@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GSAP  website</title>
     <link rel="stylesheet" href="css/styles.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <div class="logo">Ride.</div>
+        <label for="icon" for="icon">
+          <i class="fa fa-bars"></i>
+        </label>
+        <input type="checkbox" id="icon">
         <nav>
             <ul>
-                
                 <li onclick="toggleListItemClass(event)">
                     <a href="#" class="active">Home</a>
                 </li>
@@ -26,8 +29,6 @@
                 <li onclick="toggleListItemClass(event)">
                     <a href="#" >Help</a>
                 </li>
-                
-                
             </ul>
         </nav>
     </header>
@@ -37,7 +38,7 @@
             <p>Drive on the largest network of active riders.</p>
             <button class="signup-btn">Sign up to drive</button>
             <button class="talk-btn">Talk to us</button>
-        </div> 
+        </div>
         <div class="illustration">
             <!-- <object id="svgObject" type="image/svg+xml" data="images/Group_543.svg" width="100%" height=""> </object> -->
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%"  viewBox="0 0 1726.62 1036.184">
@@ -413,7 +414,7 @@
                   </g>
                 </g>
               </svg>
-              
+
         </div>
     </section>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script> -->

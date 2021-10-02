@@ -9,7 +9,7 @@ body{
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     line-height: 1;
-    
+
 }
 
 h1, h2, p{
@@ -27,9 +27,30 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    
+
     /* justify-content: space-between ; */
 
+}
+header input{
+
+}
+
+header .fa-bars{
+  position: absolute;
+  font-size: 1.4em;
+  color: #e6e6e6;
+  top: 1.5em;
+  right: 0;
+  padding-right: 10vw;
+  cursor: pointer;
+  display: none;
+}
+#icon{
+  display: none;
+}
+
+input:checked {
+  display: none
 }
 
 header .logo{
@@ -55,7 +76,7 @@ header li{
     display: inline-block;
     margin-right: 2.5rem;
     margin-top: 1rem;
-    
+
 }
 header a{
     color: #918a9e;
@@ -74,8 +95,8 @@ a.active::after {
     height: 2px;
 
     background-color: white;
-    
-  } 
+
+  }
 section.hero{
     background-color: #1C073E;
     height: 100vh;
@@ -102,7 +123,7 @@ section.hero{
 
 .hero p{
     font-size: 1em;
-    margin-bottom: 1em; 
+    margin-bottom: 1em;
     line-height: 1.5em;
     color: #918a9e;
 }
@@ -117,13 +138,13 @@ button{
     border: 1px solid white;
     cursor: pointer;
     border-radius: 5px;
-    transition: border .5s, background-color .3s, color .4s;    
+    transition: border .5s, background-color .3s, color .4s;
 }
 
 
 
 .hero .signup-btn{
-    background-color: #fff; 
+    background-color: #fff;
     color: #1C073E;
 }
 
@@ -155,6 +176,10 @@ button:hover, .signup-btn:hover, .talk-btn:hover{
 
 
 @media only screen and (max-width: 757px){
+    header .fa-bars{
+      display: inherit;
+    }
+
     header{
         padding: 1.3rem 0;
         flex-direction: column;
@@ -168,6 +193,32 @@ button:hover, .signup-btn:hover, .talk-btn:hover{
         display: none;
     }
 
+    header nav{
+      position: fixed;
+      left: -100vw;
+      transition: left 1s;
+    }
+    input:checked + nav {
+      background: #322e42;
+      left: 0;
+      display: flex;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      align-items: center;
+
+
+      justify-content: center;
+      align-items: center;
+    }
+    input:checked + nav ul {
+      display: flex;
+      flex-direction: column;
+
+    }
+    input:checked + nav ul li{
+      padding-bottom: 1.5rem;
+    }
     section.hero{
         background-color: #1C073E;
         height: 100vh;
@@ -176,10 +227,18 @@ button:hover, .signup-btn:hover, .talk-btn:hover{
         align-items: flex-start;
         justify-content: center;
     }
-    
+
     .hero .hero-content{
         /* padding-top: 13em; */
         padding-left: 10vw;
-        
+
     }
+
+}
+
+@media only screen and (max-width: 350px){
+  .hero h1{
+    margin-top: .5em;
+    font-size: 2.2em;
+  }
 }
